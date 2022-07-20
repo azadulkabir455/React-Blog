@@ -12,10 +12,13 @@ module.exports = {
             template: "./public/index.html"
         })
     ],
+    resolve: {
+        extensions: [".js", ".jsx", ".json", ".ts"],
+    },
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/,
+                test: /\.(js|jsx|ts)$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
